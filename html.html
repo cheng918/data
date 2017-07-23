@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据监测平台</title>
+    <link rel="stylesheet" href="fonts/font-awesome-4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<!--上面-->
+<div class="content">
+    <!--左边-->
+    <div class="lf lf-content">
+        <!--logo-->
+        <div class="logo">
+            <img src="img/logo.png" alt="">
+        </div>
+        <!--反共和严重程度-->
+        <div class="first-floor" >
+           <div>
+               <p>www.baidu.com</p>
+               <span>浙江</span>
+               <span>百度</span>
+           </div>
+            <div class="severity" id="severityDiv">
+
+            </div>
+        </div>
+        <!--资产总数-->
+        <!--<div class="assets">-->
+            <!--<div class="assets_total">-->
+                <!--<div class="assets_img lf"></div>-->
+                <!--<div class="rt total">-->
+                    <!--<span>123,456,789</span>-->
+                    <!--<p>资产总数</p>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="dataBar">-->
+                <!--<div class="lf"><span>IP数量&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>-->
+                <!--<div class="lf bar">-->
+                    <!--<div id="ipBar" class="ipBar"></div>-->
+                <!--</div>-->
+                <!--<div class="rt"><span>1234,56</span></div>-->
+            <!--</div>-->
+            <!--<div>-->
+                <!--<div class="lf"><span>站点数量&nbsp;</span></div>-->
+                <!--<div class="lf bar">-->
+                    <!--<div id="siteBar" class="siteBar"></div>-->
+                <!--</div>-->
+                <!--<div class="rt"><span>1234,56</span></div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--漏洞数量-->
+        <div class="b_10_3">
+            <canvas width="300" height="300" id="myCanvas"></canvas>
+
+            <div id="tags">
+                <a href="#">安全</a>
+                <a href="#">危险</a><a href="#">轻时尚</a><a href="#">简约</a><a href="#">科技</a>
+                <a href="#">美丽</a><a href="#">智慧</a><a href="#">互联网</a><a href="#">智慧</a><a href="#">互联网</a>
+            </div>
+
+            <!--<div class="loophole_total">-->
+                <!--<div class="lf loophole_img"></div>-->
+                <!--<div class="rt total">-->
+                    <!--<span>123,456,789</span>-->
+                    <!--<p>漏洞总数</p>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="dataBar">-->
+                <!--<div class="lf"><span>系统漏洞&nbsp;</span></div>-->
+                <!--<div class="lf bar">-->
+                    <!--<div id="loopholeBar" class="loopholeBar"></div>-->
+                <!--</div>-->
+                <!--<div class="rt"><span>1234,56</span></div>-->
+            <!--</div>-->
+            <!--<div>-->
+                <!--<div class="lf"><span>Web漏洞</span></div>-->
+                <!--<div class="lf bar">-->
+                    <!--<div id="webBar" class="webBar"></div>-->
+                <!--</div>-->
+                <!--<div class="rt"><span>1234,56</span></div>-->
+            <!--</div>-->
+        </div>
+         <table class="table" cellpadding="0" cellspacing="0">
+            <thead>
+            <tr>
+                <th>IP/域名</th>
+                <th>地区</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>192.190.10..105</td>
+                <td>杭州浙江</td>
+            </tr>
+            <tr>
+                <td>192.190.10.105</td>
+                <td>杭州浙江</td>
+            </tr>
+            <tr>
+                <td>192.190.10.105</td>
+                <td>杭州浙江</td>
+            </tr>
+            <tr>
+                <td>192.190.10.105</td>
+                <td>杭州浙江</td>
+            </tr>
+            <tr>
+                <td>192.190.10.105</td>
+                <td>杭州浙江</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!--右边-->
+    <div class="lf rt-content">
+        <!--搜索框-->
+        <div class="searchBox">
+            <input type="text" class="search" placeholder="IP、domain、hash、地区、中间件、组织、时间">
+            <i class="fa fa-search"></i>
+            <a href="javascript:void(0)" class="btn">清空</a>
+        </div>
+        <!--中间内容-->
+        <div class="middle">
+            <!--左边-->
+            <div class="lf midLeft">
+                <div class="lf zichan" id="attackSource"></div>
+                <div class="rt loudong" id="attacked"></div>
+            </div>
+            <!--右边-->
+            <div class="rt map" >
+                <!--地图-->
+                <div id="mapDiv" class="chinaMap">
+                </div>
+                <!--进程-->
+                <div class="centerRight">
+                    <!--内存-->
+                    <div class="neicun">
+                        <div class="lf"><span>内存:</span></div>
+                        <div class="storageData lf">
+                            <div></div>
+                        </div>
+                    </div>
+                    <!--CPU-->
+                    <div class="cpu ">
+                        <div class="lf"><span>CPU:</span></div>
+                        <div class="cpuData lf">
+                            <div></div>
+                        </div>
+                    </div>
+                    <!--进程数-->
+                    <div class="process">
+                        <div><span>进程：</span></div>
+                        <div id="processLine" class="processShow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <!--协议分类-->
+            <div class="lf" id="classification"></div>
+            <!--踪迹-->
+            <div class="lf" id="traceRingPie"></div>
+            <!--活动记录-->
+            <div class="lf" id="active">123</div>
+            <!--威胁统计-->
+            <div class="lf" id="AttackedProvien"></div>
+        </div>
+    </div>
+</div>
+<!--底部表格-->
+<div>
+    
+</div>
+<script src="js/jquery-1.8.2.js"></script>
+<script src="resourse/echarts/echarts.js"></script>
+<script src="resourse/echarts/map/js/china.js"></script>
+<script src="js/commonCharts0.js"></script>
+<script src="js/tagcanvas.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

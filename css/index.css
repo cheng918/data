@@ -1,0 +1,413 @@
+/*通用样式*/
+* {
+    padding: 0px;
+    margin: 0px;
+    font-size: 12px;
+    font-family: '微软雅黑';
+    font-weight: normal;
+    color: #9E9FA0;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+.lf {
+    float: left;
+}
+.rt {
+    float: right;
+}
+body{
+    width: 100%;
+    background-color: #2b3137;
+    /*background-color: #2b3137;*/
+}
+/***********************上半部分***************************/
+.content{
+    width: 100%;
+    min-width: 1280px;
+    height: 768px;
+}
+.lf-content{
+    width: 19%;
+    min-width: 256px;
+    height: 768px;
+    overflow: hidden;
+    /*border: 1px solid #ddd;*/
+    /*box-sizing: border-box;*/
+    background-color: #282f35;
+}
+.lf-content>div:not(:first-child){
+    width: 230px;
+    height: 150px;
+    margin: 0 auto;
+    margin-top: 15px;
+    border: 1px solid #545151;
+    box-sizing: border-box;
+}
+/*logo*/
+.lf-content div.logo{
+    width: 230px;
+    margin: 0 auto;
+    margin-top: 10px;
+    text-align: center;
+}
+.logo img{
+    width: 106px;
+    margin: 0 auto;
+}
+/*反共和严重程度*/
+.lf-content div.first-floor{
+    height: 200px;
+    color:#fff;
+}
+.first-floor>div p{
+    width: 228px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #3e454b;
+    text-align: center;
+    color: #fff;
+}
+.first-floor>div span{
+    display: block;
+    float: left;
+    width: 114px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #545151;
+    box-sizing: border-box;
+    text-align: center;
+}
+/*严重程度*/
+.severity{
+    width: 230px;
+    height: 140px;
+}
+/*资产总数  &  漏洞总数*/
+.assets,.loophole{
+    padding: 0px 5px;
+    padding-top: 8px;
+}
+.assets>div,.loophole>div{
+    width: 215px;
+    overflow: hidden;
+    /*border: 1px solid red;*/
+    color:#9E9FA0;
+}
+.assets_total,.loophole_total{
+    margin-bottom: 20px;
+}
+.assets_img{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: url(../img/01.png) no-repeat;
+}
+div.total>span{
+    height: 50px;
+    font-size: 24px;
+    color: #fff;
+}
+.assets div.total>p,.loophole div.total>p{
+    font-size: 12px;
+    padding-top: 5px;
+    color: #fff;
+    text-align: right;
+    color: #9E9FA0;
+}
+.assets>div:not(:first-child),.loophole>div:not(:first-child){
+    width: 215px;
+    height: 30px;
+    line-height: 30px;
+}
+/*数据显示条*/
+.bar{
+    width: 100px;
+    height: 8px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, .2);
+}
+.webBar,.loopholeBar,.siteBar,.ipBar{
+    width: 60px;
+    height: 8px;
+    border-radius: 15px;
+}
+.siteBar,.ipBar{
+    background:#5599ee;
+}
+.webBar,.loopholeBar{
+    background:#e26b67;
+}
+
+
+
+.lf-content>div.b_10_3 {
+    overflow: hidden;
+    text-align:center;
+    height: 300px;
+    /*background:#999;*/
+
+}
+.b_10_3 canvas{
+    width: 100%;
+    height: 260px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    /*border: 1px solid red;*/
+    /*box-sizing: border-box;*/
+}
+.b_10_3 span {
+    float: left;
+    font-size:16px;
+    line-height:2em;
+}
+.b_10_3 span.bold {
+    font-weight:bold;
+}
+.b_10_3 span:nth-child(1) {
+    width: 35%;
+    text-align: center;
+}
+.b_10_3 span:nth-child(2) {
+    width: 30%;
+    text-align: left;
+}
+.b_10_3 span:nth-child(3) {
+    width: 35%;
+    text-align: left;
+}
+.b_10_3 span:nth-child(4) {
+    width: 35%;
+    text-align: right;
+}
+.b_10_3 span:nth-child(5) {
+    width: 25%;
+    text-align: right;
+}
+.b_10_3 span:nth-child(6) {
+    width: 25%;
+    text-align: right;
+}
+.b_10_3 span:nth-child(7) {
+    width: 50%;
+    text-align: center;
+}
+.b_10_3 span:nth-child(8) {
+    width: 30%;
+    text-align: center;
+}
+.b_10_3 span:nth-child(9) {
+    width: 50%;
+    text-align: right;
+}
+.b_10_3 span:nth-child(10) {
+    width: 40%;
+    text-align: right;
+}
+
+
+
+
+/*漏洞总数*/
+/*.loophole_img{*/
+    /*width: 50px;*/
+    /*height: 50px;*/
+    /*background: url(../img/02.png);*/
+/*}*/
+/*全球被黑网站*/
+.table{
+    width: 230px;
+    text-align: left;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+.table thead{
+    background-color:#3e454b ;
+}
+.table tr{
+    height: 25px;
+    line-height: 25px;
+    border: 1px solid #fff;
+    padding: 0;
+}
+.table td{
+    border-bottom: 1px solid#3e454b;
+}
+.table tr:hover{
+    background-color:#3e454b ;
+}
+
+/********************右边内容框****************/
+.rt-content{
+    width:80%;
+    min-width: 1024px;
+    overflow: hidden;
+    height: 768px;
+    padding: 10px;
+    /*padding: 0 10px;*/
+    /*border: 1px solid red;*/
+    box-sizing: border-box;
+}
+/*搜索框*/
+.searchBox{
+    width: 360px;
+    height: 30px;
+    line-height:30px;
+    position: relative;
+    background-color: #3E454B;
+    margin-top: 10px;
+    margin-bottom: 11px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border: 1px solid #3E454B;
+}
+.searchBox i{
+    position: absolute;
+    left: 295px;
+    top: 9px;
+    cursor: pointer;
+}
+.searchBox a.btn{
+    display: inline-block;
+    width: 46px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-left: 1px solid #333;
+}
+.search{
+    width: 300px;
+    padding: 3px;
+    border-radius: 5px;
+    border:  1px solid transparent;
+    background-color: #3E454B;
+}
+.search:focus{
+    /*border: 2px solid red;*/
+}
+/*中间内容区*/
+.middle{
+    width: 100%;
+    height: 530px;
+    overflow: hidden;
+    margin-top: 8px;
+    /*border: 1px solid red;*/
+    /*box-sizing: border-box;*/
+}
+.middle .midLeft{
+    width: 24%;
+    min-width:220px;
+    height: 530px;
+    /*border: 1px solid red;*/
+    /*box-sizing: border-box;*/
+}
+.midLeft>div{
+    width: 100%;
+    height: 260px;
+    border: 1px solid #545151;
+    box-sizing: border-box;
+}
+.midLeft>div.zichan{
+    margin-bottom: 10px;
+}
+.map{
+    width: 76%;
+    min-width: 760px;
+    height: 530px;
+    position: relative;
+    /*border: 1px solid red;*/
+    /*box-sizing: border-box;*/
+}
+.chinaMap{
+    width: 100%;
+    height: 530px;
+    /*border: 1px solid red;*/
+    /*box-sizing: border-box;*/
+    position: relative;
+}
+
+/*内存-CPU-进程数*/
+div.centerRight{
+    width: 260px;
+    height: 100px;
+    position: absolute;
+    bottom: 20px;
+    left: 25px;
+    text-align: left;
+}
+.centerRight>div{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    margin: 0 auto;
+    /*border: 1px solid #fff;*/
+    /*box-sizing: border-box;*/
+}
+.centerRight>div.process{
+    height: 40px;
+}
+.process>div{
+    float:left;
+    height: 40px;
+}
+.process>div:first-child{
+    width: 40px;
+    line-height: 40px;
+}
+.processShow{
+    width: 200px;
+}
+.neicun>div.storageData,.cpu>div.cpuData{
+    width: 100px;
+    height: 8px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, .2);
+}
+.neicun>div.storageData>div{
+    width: 80px;
+    height: 8px;
+    border-radius: 15px;
+    background: #5596e6;
+}
+.cpu>div.cpuData>div{
+    width: 60px;
+    height: 8px;
+    border-radius: 15px;
+    background: #e56564;
+}
+/*
+.processShow{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+}
+*/
+/*底部图形*/
+.bottom{
+    width: 100%;
+    height: 160px;
+    margin-top: 15px;
+    /*border: 1px solid red;*/
+    /*box-sizing: border-box;*/
+}
+.bottom>div{
+    width: 24%;
+    /*min-width: 240px;*/
+    height: 160px;
+    border: 1px solid #545151;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
